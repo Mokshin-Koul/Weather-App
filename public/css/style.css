@@ -80,3 +80,17 @@ button {
     border: none;
 }
 
+@media (max-width: 852px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    .main_content {
+        width: 90%;
+    }
+
+    input {
+        width: 50%;
+    }
+}
+
