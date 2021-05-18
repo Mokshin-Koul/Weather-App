@@ -5,6 +5,8 @@ const geoLocation = require('./utils/geoLocation');
 const getWeather = require('./utils/getWeather');
 const app = express();
 
+const port = process.env.PORT || 3000;
+
 const publicDirectory = path.join(__dirname,'../public'); //we need to provide the absolute path and not the relative path
 const viewsDirectory = path.join(__dirname,'../templates/views');
 const partialsDirectory = path.join(__dirname,'../templates/partials')
@@ -87,6 +89,6 @@ app.get('*',(req,res) => {
     })
 })
 
-app.listen(3000,() => {
+app.listen(port,() => {
     console.log('starting the server at port 3000');
 })
